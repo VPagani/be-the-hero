@@ -1,0 +1,30 @@
+{
+  "name": "be-the-hero",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "client",
+    "mobile",
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "start": "concurrently \"yarn:start:*\"",
+    "start:client": "yarn workspace @be-the-hero/client run start",
+    "start:mobile": "yarn workspace @be-the-hero/mobile run start",
+    "start:server": "yarn workspace @be-the-hero/server run start",
+    "build": "concurrently \"yarn:build:*\"",
+    "build:client": "yarn workspace @be-the-hero/client run build",
+    "build:mobile": "yarn workspace @be-the-hero/mobile run build",
+    "build:server": "yarn workspace @be-the-hero/server run build"
+  },
+  "devDependencies": {
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "decoders": "^1.18.1"
+  }
+}
