@@ -2,6 +2,7 @@
     "name": "@be-the-hero/server",
     "version": "1.0.0",
     "license": "UNLICENSED",
+    "private": true,
     "scripts": {
         "start": "ts-node-dev --no-notify --respawn src/index.ts --ignore-watch node_modules",
         "build": "tsc",
