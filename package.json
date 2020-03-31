@@ -7,8 +7,7 @@
   "workspaces": [
     "client",
     "mobile",
-    "server",
-    "shared"
+    "server"
   ],
   "scripts": {
     "start": "concurrently \"yarn:start:*\"",
