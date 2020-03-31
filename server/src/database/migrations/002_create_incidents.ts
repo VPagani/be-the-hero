@@ -14,5 +14,5 @@ export const up = (knex: Knex) =>
 ;
 
 export const down = (knex: Knex) =>
-    knex.schema.dropTable("ongs")
+    knex.schema.dropTable("incidents")
 ;
