@@ -1,4 +1,7 @@
 import * as Knex from "knex";
 import { Knex as configuration } from "../config";
 
-export default Knex(configuration.development);
+type ENV = "development" | "test";
+const env = process.env.NODE_ENV as ENV ?? "development";
+
+export default Knex(configuration[env]);
