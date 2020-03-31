@@ -3,7 +3,7 @@ import type { Handler } from "express";
 import db from "../database/connection";
 
 export const index: Handler = async (req, res) => {
-    const { page = "1" } = req.params;
+    const { page = "1" } = req.query;
 
     const [count] = await db("incidents").count();
 
