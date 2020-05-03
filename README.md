@@ -7,7 +7,6 @@
 </p>
 
 <p align="center">
-    <a href="https://david-dm.org/VPagani/be-the-hero"><img alt="GitHub license" src="https://david-dm.org/VPagani/be-the-hero.svg"></a>
     <a href="https://github.com/VPagani/be-the-hero/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/VPagani/be-the-hero"></a>
 </p>
 <hr/>
@@ -33,7 +32,7 @@ Tecnologias usadas: [TypeScript], [React] e [Webpack]
 
 ### Aplicativo Mobile - [`@be-the-hero/mobile`](./mobile)
 
-O *Alicativo Mobile* é responsável por fornecer interfaces para as pessoas que querem se tornar Heróis poderem descobrir os casos registrados e terem acesso aos detalhes para se comunicar com a ONG responsável.
+O *Aplicativo Mobile* é responsável por fornecer interfaces para as pessoas que querem se tornar Heróis poderem descobrir os casos registrados e terem acesso aos detalhes para se comunicar com a ONG responsável.
 
 Tecnologias usadas: [TypeScript], [React], [React Native][ReactNative] e [Expo]
 
@@ -42,18 +41,18 @@ Tecnologias usadas: [TypeScript], [React], [React Native][ReactNative] e [Expo]
 
 Para facilitar o gerenciamento das partes do projeto eu usei os [Workspaces][YarnWorkspaces] do [Yarn], então é possível gerenciar as dependências e iniciar os ambientes de desenvolvimento usando poucos comandos:
 
-Primeiro instale as dependências:
+#### Primeiro instale as dependências:
 ```
 yarn
 ```
 
-Depois inicie todos os ambientes de desenvolvimento:
+#### Depois inicie todos os ambientes de desenvolvimento:
 
 ```
 yarn start
 ```
 
-Ou inicie cada um separadamente:
+#### Ou inicie cada um separadamente:
 
 ```
 yarn start:server
@@ -66,6 +65,20 @@ yarn start:client
 ```
 yarn start:mobile
 ```
+
+#### Ou inicie um conjunto específico:
+
+##### web = server + client
+
+```
+yarn start:web
+```
+
+##### app = server + mobile
+```
+yarn start:app
+```
+
 
 Pronto!
 

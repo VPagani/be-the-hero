@@ -11,16 +11,21 @@
   ],
   "scripts": {
     "start": "concurrently \"yarn:start:*\"",
+    "start:web": "concurrently -n client,server \"yarn:start:client\" \"yarn:start:server\"",
+    "start:app": "concurrently -n mobile,server \"yarn:start:mobile\" \"yarn:start:server\"",
     "start:client": "yarn workspace @be-the-hero/client run start",
     "start:mobile": "yarn workspace @be-the-hero/mobile run start",
     "start:server": "yarn workspace @be-the-hero/server run start",
     "build": "concurrently \"yarn:build:*\"",
+    "build:web": "concurrently -n client,server \"yarn:build:client\" \"yarn:build:server\"",
+    "build:app": "concurrently -n mobile,server \"yarn:build:mobile\" \"yarn:build:server\"",
     "build:client": "yarn workspace @be-the-hero/client run build",
     "build:mobile": "yarn workspace @be-the-hero/mobile run build",
     "build:server": "yarn workspace @be-the-hero/server run build"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
+    "concurrently": "^5.2.0",
     "cross-env": "^7.0.2",
     "jest": "^25.2.4",
     "ts-jest": "^25.3.0",
